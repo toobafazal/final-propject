@@ -1,23 +1,45 @@
+ 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html{
-    font-size: 10px;
-    font-family: monospace, Arial, Helvetica, sans-serif;
+    font-family: 'Vollkorn', serif;    
 }
-a{
-    text-decoration: none;
+body{
+    background-color: rgb(240, 230, 230);
+}
+.mybtn{
+background-color:rgb(196, 68, 138) !important;
+border: 3px ridge goldenrod !important;
+color: #fff !important;
+}
+.mybtn a{
+    color: #fff !important;
+
+}
+.mybtn:hover{
+    transform: scale(0.90);
 }
 
 .ayat{
     text-align: center;
     background-color: #111;
-    z-index: -1;
     color: #fff;
     font-size: 1.5rem;
-    margin: 0px 0px;
+}
+.logo{
+    width: 150px;
+    height: 80px;
+    margin-left: 70px;
+    border-radius: 200px ;
+}
+.subtitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
 }
 #hero{
     background: url("../images/ayat.jpg");
@@ -25,7 +47,6 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-   
     padding: 9em 5em;
 
 } 
@@ -39,15 +60,15 @@ a{
 }
 
 
-#hero span{
+ span{
     overflow: hidden;
-    height: 30px;
+    height: 10px;
     position: relative;
     text-align: center;
 }
-#hero span1{
+ span1{
     display: inline-block;
-    color: rgb(226, 8, 146);
+    color: rgb(76, 129, 226);
     position: relative;
     white-space: nowrap;
     font-size: 40px;
@@ -59,32 +80,344 @@ a{
 }
 
  .headline{
-    color: rgb(219, 35, 149) ;
+    color: rgb(172, 54, 119) ;
     text-align: center;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .headline .line{
-    border-top: 1px solid rgba(218, 165, 32, 0.836);
-    border-bottom: 1px solid rgba(218, 165, 32, 0.836);
+    border-top: 5px ridge rgba(218, 165, 32, 0.836);
+    border-bottom: 5px ridge rgba(218, 165, 32, 0.836);
     padding: 0px 35px;
 }
-/*.mynav{
-    background-color: rgb(179, 79, 140);
-    box-shadow:0px 8px 5px  rgba(218, 165, 32, 0.61);
-    width: 100%;
+.mynav{
+    background-color:  #fff;
+    box-shadow: rgba(109, 108, 108, 0.45) 0px 25px 20px -20px;
+        width: 100%;
+    /* position: fixed; */
 }
+
+  .mynav + .content {
+    padding-top: 60px;
+  }
 .mynav ul li a{
-    color: #fff !important;
+    color: #111 !important;
     font-weight: 500;
     font-size: 1rem;
-    padding: 15px !important;
-    border-left: 1px solid rgba(248, 246, 242, 0.836); 
+    padding: 20px !important;
+
+}
+.mynav ul li a:hover{
+    background-color: rgb(172, 54, 119) ;
+    color: #fff !important;
+    border-radius: 15px 15px 0 0;
+
 }
 .mynav ul li a i{
     font-size: 20px;
 }
-#bookflip{
+/************************************ about styling ******************************/
+
+#about .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #about h2{
+    padding:15px 5px 5px 50px;
+
+}
+.main{
+    margin-top: 50px;
+    height: 200px;
+    width: 100% !important;
+    background-repeat: no-repeat;
+}
+
+
+#about a{
+    text-decoration: none;
+    color: #fff;
+}
+#about .mybreadcrumb{
+    padding-left: 20px;
+    color: #fff;
+}
+#about p{
+    color: rgb(122, 128, 125);
+}
+#about .about-text{
+display: flex;
+flex-direction: row;
+justify-content:center;
+align-items: center;
+text-align: justify;
+margin-right: 50px;
+margin-top: 50px;
+
+}
+#about video{
+    width:50% !important;
+    height: 60% !important;
+    margin-left:70px !important;
+}
+#about button{
+    margin-left: 90px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    background-color:rgb(172, 54, 119) !important;
+    border: 3px ridge goldenrod !important;
+
+}
+
+/*************************888*********************88 course ********************************88******88*/
+#course .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #course h2{
+    padding:15px 5px 5px 50px;
+
+}
+#course .slide img{
+    width: 90%;
+    margin: 0 auto;
+    height: 30vh;
+}
+#course .slide img:hover{
+    transform: scale(0.95);
+}
+#course .slide{
+    height: 500px;
+}
+#course .mycard{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border:2px solid rgb(172, 54, 119);
+    padding-top: 20px;
+}
+#course button{
+    margin-left: 90px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+#course button a{
+    color: #fff;
+}
+
+/********************************************* teachers ******************************************/
+#teachers{
+    color: #fff;
+}
+#teachers .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173) !important;
+    height: 13vh !important;
+    text-align: center;
+    justify-content: center;
+}
+#teachers h2{
+    padding:15px 5px 5px 50px;
+}
+
+#teachers a img{
+    max-width: 100%;
+    height: 300px;
+}
+
+#teachers .blog-entry .entry-hover .hover-cover,
+#teachers:hover .blog-entry .entry-hover .hover-cover,
+#teachers .blog-entry .hover-info,
+i, input,textarea, body, button,a{
+    transition: ease-in-out 0.4s;
+}
+#teachers .blog{
+    padding: 80px 0 20px;
+    overflow: hidden;
+}
+#teachers h2,h3{
+    font-family: monospace;
+}
+#teachers .blog-entry{
+    margin-bottom: 200px;
+    position: relative;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; 
+}
+ #teachers .blog-entry .entry-hover{
+    position: absolute;
+    margin: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0px;
+}
+#teachers .blog-entry .entry-hover .hover-cover{
+position: absolute;
+bottom: 50;
+left: 0;
+right: 0;
+margin: 0 auto -75px;
+z-index: 2;
+border-radius: 300px;
+filter: alpha(opacity=80);
+
+}
+#teachers .blog-entry:hover .entry-hover .hover-cover{
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#teachers .blog-entry .hover-info{
+    position: absolute;
+    top: 100%;
+    margin-top: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+}
+#teachers .blog-entry:hover .hover-info{
+    top: 0;
+    margin-top:25px
+}
+#teachers .blog-entry .hover-info img{
+    border-radius: 200px;
+    width: 70px;
+    height: 70px;
+    margin:0 auto 18px;
+}
+#teachers .blog-entry:hover .hover-info img{
+    border: 0px solid white !important;
+    transition: all 0.5s ease-in-out;
+}
+#teachers .blog-entry:hover .hover-info:hover img{
+    transform: scale(1.3) rotate(360deg);
+}
+#teacher .blog-entry .hover-info p{
+    font-size: 13px;
+    font-style:italic;
+}
+#teacher .blog-entry .hover-info h2 a{
+    color: #fff !important;
+    text-decoration: none; 
+}
+#teacher .blog-entry .hover-info .hover-text,
+#teacher .blog-entry .hover-info .hover-author{
+    display: none;
+    margin-bottom: 20px;
+}
+#teacher .blog-entry:hover .hover-info .hover-text,
+#teacher .blog-entry:hover .hover-info .hover-author{
+    display: block;
+}
+.designation{
+    color: #fff;
+}
+.designation.active, .real{
+    background-color:  rgb(165, 74, 124,0.8);
+}
+/* testimonial  */
+
+#testimonial .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #testimonial h2{
+    padding:15px 5px 5px 50px;
+
+}
+
+#news .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #news h2{
+    padding:15px 5px 5px 50px;
+
+}
+#video .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #video h2{
+    padding:15px 5px 5px 50px;
+
+}
+#registration .text-center{
+    margin: 50px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #registration h2{
+    padding:15px 5px 5px 50px;
+
+}
+#registration .text-centerrr{
+    margin: 50px 0 0px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 10vh !important;
+}
+#registration .std-info{
+    border: 2px solid rgb(172, 54, 119);
+}
+#registration .std-info input{
+        padding: 0 1rem;
+        height: 50px;
+        outline: none;
+        border:none ;
+        background-color: #fff;
+        width: 40%;
+        font-size: 1.15rem;
+        border-radius: 25px;
+        border-bottom: 5px solid rgb(172, 54, 119);
+        margin: 2rem 2rem;
+    }
+    
+#registration .std-info select{
+    padding: 0 1rem;
+    height: 50px;
+    outline: none;
+    border:none ;
+    background-color: #fff;
+    width: 40%;
+    font-size: 1.15rem;
+    border-radius: 25px;
+    border-bottom: 5px solid rgb(172, 54, 119);
+    margin: 2rem 2rem;
+}
+
+#registration .create .btn{
+    float: right;
+    margin-right: 20px;
+    margin-top:20px ;
+}
+/*#bookflip{
     height: 100%;
     display: flex;
     justify-content: center;
@@ -141,7 +474,7 @@ a{
     transform: rotateY(180deg);
     backface-visibility: hidden;
 } */
-@keyframes move{
+ @keyframes move{
     0%{
         top: 0%;
     }
@@ -156,5 +489,39 @@ a{
     }
     100%{
         top: -200px;
+    }
+} 
+@media  only screen and(min-device-width:768px) 
+and(min-device-width:768px)
+and(max-device-width:1024px)
+and(orientation:portrait)
+and(-webkit-min-device-pixel-ratio:1)
+{
+    
+    .ayat{
+        display: none;
+    }
+    #course .slide{
+        margin-top: 15px;
+    }
+    
+
+}
+@media only screen and (max-width:768px){
+    .ayat{
+        display: none;
+    }
+    #about .about-text{
+        display: inline;
+    }
+    #course .slide{
+        margin-top: 10px;
+    }
+    #video .container{
+        display: inline !important;
+    }
+    #video .container iframe{
+        height: 200px !important;
+        width: 300px !important;
     }
 }
