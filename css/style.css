@@ -143,6 +143,8 @@ color: #fff !important;
 }
 #about .mybreadcrumb{
     padding-left: 20px;
+    background-color:  rgb(172, 54, 119) !important;
+    margin-top: 0px;
     color: #fff;
 }
 #about p{
@@ -156,6 +158,7 @@ align-items: center;
 text-align: justify;
 margin-right: 50px;
 margin-top: 50px;
+background-color: rgb(240, 230, 230);
 
 }
 #about video{
@@ -417,6 +420,35 @@ filter: alpha(opacity=80);
     margin-right: 20px;
     margin-top:20px ;
 }
+#footer{
+    background-color: #fff;
+}
+#footer .footer-hr{
+    width: 125px;
+    height: 5px;
+}
+#footer .text-center{
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    height: 10vh !important;
+}
+#footer .bg-success{
+    background-color:  rgb(172, 54, 119) !important;
+
+}
+#footer a{
+    color: #111 !important;
+}
+#footer .footer-copyright{
+    width:100% !important;
+}
+#footer .myfooter i{
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+
 /*#bookflip{
     height: 100%;
     display: flex;
