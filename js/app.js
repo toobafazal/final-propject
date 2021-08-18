@@ -1,18 +1,17 @@
 //oourse slick 
 $('.slider').slick({
   dots: true,
-  infinite: false,
-  speed: 300,
+  infinite: true,
+  speed: 1500,
   autoplay:true,
   slidesToShow: 3,
-  slidesToScroll: 2,
-  content:">",
+  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
       }
@@ -21,7 +20,8 @@ $('.slider').slick({
       breakpoint: 600,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 2
+        slidesToScroll: 1
+      
       }
     },
     {
@@ -29,6 +29,7 @@ $('.slider').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      
       }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -37,9 +38,15 @@ $('.slider').slick({
   ]
 });
 // slick end 	
-
-
-
+$(document).ready(function(){
+      $('#login').click(function(){
+      $('.login-form').addClass('popup');
+      });
+      $('.login-form form .fa-times').click(function(){
+        $('.login-form').removeClass('popup');
+        });
+  
+    });
 
 
 

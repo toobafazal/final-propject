@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 html{
-    font-family: 'Vollkorn', serif;    
+    font-family: 'Vollkorn', serif; 
+    scroll-behavior: smooth;
+   
 }
 body{
     background-color: rgb(240, 230, 230);
@@ -14,6 +16,8 @@ body{
 background-color:rgb(196, 68, 138) !important;
 border: 3px ridge goldenrod !important;
 color: #fff !important;
+padding: 10px;
+font-size: 1.5rem;
 }
 .mybtn a{
     color: #fff !important;
@@ -94,12 +98,12 @@ color: #fff !important;
     background-color:  #fff;
     box-shadow: rgba(109, 108, 108, 0.45) 0px 25px 20px -20px;
         width: 100%;
-    /* position: fixed; */
+    
 }
 
   .mynav + .content {
     padding-top: 60px;
-  }
+ }
 .mynav ul li a{
     color: #111 !important;
     font-weight: 500;
@@ -116,6 +120,93 @@ color: #fff !important;
 .mynav ul li a i{
     font-size: 20px;
 }
+.vision{
+    background-image: linear-gradient( rgba(7, 7, 7, 0), rgb(241, 168, 223)), url(../images/vision-bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    height: 50vh;
+ 
+}
+.vision h2{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 60px;
+}
+.vision p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+}
+/********************************************* login-form  ******************************** */
+.login-form{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form form{
+    width: 35rem;
+    background: #fff;
+    margin: 0 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 .1rem .3rem #333 ;
+}
+.login-form.popup{
+    top: 0;
+}
+.login-form form h3{
+    font-size: 3rem;
+    color: rgb(172, 54, 119);
+    padding: 1rem 0;
+}
+.login-form form .box{
+    width: 100%;
+    padding: 1rem 0;
+    margin:1rem 0;
+    border: none;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color: #333;
+    text-transform: none;
+}
+.login-form form .box::placeholder{
+text-transform: capitalize;
+}
+.login-form form .box:focus{
+    border: none;
+    border-bottom: .2rem solid #666;
+    border-color: rgb(172, 54, 119);
+}
+.login-form form .box:nth-child(2){
+margin-bottom: 5rem;
+}
+.login-form form p a{
+    color: rgb(172, 54, 119);
+}
+.login-form form .btn{
+    width: 100% !important;
+    border-radius: 50px !important;
+}
+.login-form form .fa-times{
+    float: right;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #999;
+
+}
+.login-form form .fa-times:hover{
+    color: #111;
+}
+
+
 /************************************ about styling ******************************/
 
 #about .text-center{
@@ -158,7 +249,12 @@ align-items: center;
 text-align: justify;
 margin-right: 50px;
 margin-top: 50px;
+margin-left: 50px;
 background-color: rgb(240, 230, 230);
+
+}
+#about .para{
+    background-color: rgb(240, 230, 230);
 
 }
 #about video{
@@ -197,7 +293,21 @@ background-color: rgb(240, 230, 230);
     transform: scale(0.95);
 }
 #course .slide{
-    height: 500px;
+    height: 550px;
+}
+
+
+#course .slick-arrow:hover{
+    background-color: rgb(172, 54, 119);
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    outline: none;
+    border-radius: 50%;
+
+}
+#course h5{
+    color: rgb(172, 54, 119);
 }
 #course .mycard{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -245,6 +355,9 @@ i, input,textarea, body, button,a{
 #teachers .blog{
     padding: 80px 0 20px;
     overflow: hidden;
+}
+#teachers h2 a{
+    color: rgb(172, 54, 119);
 }
 #teachers h2,h3{
     font-family: monospace;
@@ -313,9 +426,13 @@ filter: alpha(opacity=80);
     font-size: 13px;
     font-style:italic;
 }
-#teacher .blog-entry .hover-info h2 a{
+#teacher .blog-entry .hover-info p h2 a{
     color: #fff !important;
     text-decoration: none; 
+}
+#teacher .blog-entry .hover-info p h2 a:hover{
+    color: #fff !important;
+
 }
 #teacher .blog-entry .hover-info .hover-text,
 #teacher .blog-entry .hover-info .hover-author{
@@ -332,7 +449,7 @@ filter: alpha(opacity=80);
 .designation.active, .real{
     background-color:  rgb(165, 74, 124,0.8);
 }
-/* testimonial  */
+/***************************** testimonial  ****************************8*/
 
 #testimonial .text-center{
     margin: 20px 0 40px 0 !important;
@@ -345,7 +462,78 @@ filter: alpha(opacity=80);
     padding:15px 5px 5px 50px;
 
 }
+/****************************** sevice ********************************/
+#service .service-section{
+    background-image: linear-gradient(to left, rgba(255,0,0,0),#d859d2), url(../images/bg-service.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 60px 0;
+    
+}
+#service .text-center{
+    margin: 20px 0 40px 0 !important;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(172, 54, 119) !important;
+    box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
+    height: 13vh !important;
+}
+ #service h2{
+    padding:15px 5px 5px 50px;
 
+}
+#service .inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px ;
+    overflow: hidden;
+}
+#service .section-title{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+#service .service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#service .service-box{
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+#service .service-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(255, 247, 251);
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    color: rgb(255, 255, 255);
+
+}
+#service .service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 25px;
+    transition: 0.3 linear;
+}
+#service .service-box:hover .service-icon{
+    background: rgb(194, 79, 142);
+    color: rgb(252, 248, 250);
+    border: 3px solid rgb(214, 28, 121);
+
+}
+#service .service-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 #news .text-center{
     margin: 20px 0 40px 0 !important;
     color: rgb(255, 255, 255) !important;
@@ -357,6 +545,7 @@ filter: alpha(opacity=80);
     padding:15px 5px 5px 50px;
 
 }
+/******************************* video  ***************************/
 #video .text-center{
     margin: 20px 0 40px 0 !important;
     color: rgb(255, 255, 255) !important;
@@ -367,6 +556,9 @@ filter: alpha(opacity=80);
  #video h2{
     padding:15px 5px 5px 50px;
 
+}
+#video iframe{
+margin: auto;
 }
 #registration .text-center{
     margin: 50px 0 40px 0 !important;
@@ -388,6 +580,12 @@ filter: alpha(opacity=80);
 }
 #registration .std-info{
     border: 2px solid rgb(172, 54, 119);
+}
+#registration .mybtn-reg{
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
 }
 #registration .std-info input{
         padding: 0 1rem;
@@ -415,8 +613,8 @@ filter: alpha(opacity=80);
     margin: 2rem 2rem;
 }
 
-#registration .create .btn{
-    float: right;
+#registration  .btn{
+    float: center;
     margin-right: 20px;
     margin-top:20px ;
 }
@@ -445,10 +643,21 @@ filter: alpha(opacity=80);
 #footer .myfooter i{
     color: #fff;
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 30px;
 }
-
-
+#footer .text-light{
+    color: #fff !important;
+}
+.top-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.top-btn img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
 /*#bookflip{
     height: 100%;
     display: flex;
@@ -536,6 +745,14 @@ and(-webkit-min-device-pixel-ratio:1)
     #course .slide{
         margin-top: 15px;
     }
+     
+    .login-form form{
+        width: 30rem;
+        background: #fff;
+        margin: 0 1rem;
+        padding: 1rem 2rem;
+    
+} 
     
 
 }
@@ -543,11 +760,17 @@ and(-webkit-min-device-pixel-ratio:1)
     .ayat{
         display: none;
     }
+    body{
+        overflow-x:hidden;
+    }
     #about .about-text{
         display: inline;
     }
     #course .slide{
         margin-top: 10px;
+    }
+    #course button .next{
+        display:none;
     }
     #video .container{
         display: inline !important;
@@ -556,4 +779,30 @@ and(-webkit-min-device-pixel-ratio:1)
         height: 200px !important;
         width: 300px !important;
     }
+    #registration .std-info input{
+        width: 90%;
+    }
+    #registration .std-info select{
+        width: 90%;
+    }
+    #service .service-box{
+        max-width: 100%;
+        
+    }
+    .top-btn{
+        right:70px;
+    }
+        .login-form form{
+            width: 20rem;
+            background: #fff;
+            margin: 0 1rem;
+            padding: 1rem 2rem;
+        
+    } 
+    .vision h2{
+        font-size: 30px;
+    }
+    .vision p{
+        font-size: 15px;
+    }   
 }
