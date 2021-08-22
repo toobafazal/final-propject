@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 html{
-    font-family: 'Vollkorn', serif; 
+
     scroll-behavior: smooth;
+    transition: all .2s linear;
    
 }
 body{
     background-color: rgb(240, 230, 230);
+    overflow-x : hidden;
 }
 .mybtn{
 background-color:rgb(196, 68, 138) !important;
@@ -63,19 +65,27 @@ font-size: 1.5rem;
     width: 100%;
 }
 
-
- span{
+.box{
+    border: 2px solid rgb(172, 54, 119);
+    width: 100%;
+}
+ b{
     overflow: hidden;
-    height: 10px;
+    height: 200px;
     position: relative;
     text-align: center;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
  span1{
     display: inline-block;
-    color: rgb(76, 129, 226);
+    color: rgb(172, 54, 119);
     position: relative;
     white-space: nowrap;
-    font-size: 40px;
+    font-size: 1.5rem;
+    margin-top: 40px;
     top: 0px;
     left: 0px;
     animation: move 5s;
@@ -101,9 +111,6 @@ font-size: 1.5rem;
     
 }
 
-  .mynav + .content {
-    padding-top: 60px;
- }
 .mynav ul li a{
     color: #111 !important;
     font-weight: 500;
@@ -124,9 +131,17 @@ font-size: 1.5rem;
     background-image: linear-gradient( rgba(7, 7, 7, 0), rgb(241, 168, 223)), url(../images/vision-bg.png);
     background-size: cover;
     background-attachment: fixed;
-    color: rgb(255, 255, 255);
+    color:#fff;
     height: 50vh;
  
+}
+.vision .vision-curve{
+    background-image: linear-gradient( rgba(7, 7, 7, 0), rgb(241, 168, 223)), url(../images/vision\ curve.PNG);
+    height: 20vh;
+    width: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .vision h2{
     text-align: center;
@@ -137,6 +152,7 @@ font-size: 1.5rem;
     font-size: 30px;
     text-align: center;
     padding-top: 50px;
+    font-weight: 600;
 }
 /********************************************* login-form  ******************************** */
 .login-form{
@@ -535,7 +551,7 @@ filter: alpha(opacity=80);
     margin-bottom: 10px;
 }
 #news .text-center{
-    margin: 20px 0 40px 0 !important;
+    margin: 20px 0 0px 0 !important;
     color: rgb(255, 255, 255) !important;
     background-color:  rgb(172, 54, 119) !important;
     box-shadow: 5px 5px 5px 5px rgb(177, 173, 173);
@@ -543,6 +559,39 @@ filter: alpha(opacity=80);
 }
  #news h2{
     padding:15px 5px 5px 50px;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.contact input{
+    border: none;
+    margin: 50px 20px 0px 0px;
+    border-bottom: 2px solid rgb(172, 54, 119);
+    width: 400px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    background: none;
+}
+.contact input::placeholder{
+    color: #fff;
+
+}
+.contact .mybtn{
+    padding: 0px 30px;
+    margin-top: 30px;
+}
+.contact label{
+    font-size: 1.5rem;
+    border: none;
+    margin: 50px 20px 0px 0px;
+    width: 150%;
+    color: #fff;
+    font-weight: bold;
+    
 
 }
 /******************************* video  ***************************/
@@ -720,16 +769,16 @@ margin: auto;
         top: 0%;
     }
     25%{
-        top: -50px;
+        top: -25px;
     }
     50%{
-        top: -100px;
+        top: -50px;
     }
     75%{
-        top: -150px;
+        top: -75px;
     }
     100%{
-        top: -200px;
+        top: -90px;
     }
 } 
 @media  only screen and(min-device-width:768px) 
@@ -760,7 +809,7 @@ and(-webkit-min-device-pixel-ratio:1)
     .ayat{
         display: none;
     }
-    body{
+    html{
         overflow-x:hidden;
     }
     #about .about-text{
@@ -790,12 +839,12 @@ and(-webkit-min-device-pixel-ratio:1)
         
     }
     .top-btn{
-        right:70px;
+        right:40px;
     }
         .login-form form{
             width: 20rem;
             background: #fff;
-            margin: 0 1rem;
+            margin: 0;
             padding: 1rem 2rem;
         
     } 
@@ -804,5 +853,21 @@ and(-webkit-min-device-pixel-ratio:1)
     }
     .vision p{
         font-size: 15px;
-    }   
+    }  
+    .contact input{
+        margin: 10px 20px 0px 0px;
+        width: 200px;
+        font-size: 1rem;
+        font-weight: lighter;
+    } 
+    .contact label{
+        font-size: 1rem;
+    }
+    span1{
+        display: flex;
+        white-space: nowrap;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
 }
